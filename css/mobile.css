@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: "akira";
+    src: url("../fonts/Akira\ Expanded\ Demo.otf");
+    }
+@font-face {
+    font-family: "thin";
+    src: url("../fonts/Paperlogy-1Thin.ttf");
+}
+@font-face {
+    font-family: "extralight";
+    src: url("../fonts/Paperlogy-2ExtraLight.ttf");
+}
+@font-face {
+    font-family: "light";
+    src: url("../fonts/Paperlogy-3Light.ttf");
+}
+@font-face {
+    font-family: "regular";
+    src: url("../fonts/Paperlogy-4Regular.ttf");
+}
+@font-face {
+    font-family: "medium";
+    src: url("../fonts/Paperlogy-5Medium.ttf");
+}
+@font-face {
+    font-family: "semibold";
+    src: url("../fonts/Paperlogy-6SemiBold.ttf");
+}
+@font-face {
+    font-family: "bold";
+    src: url("../fonts/Paperlogy-7Bold.ttf");
+}
+@font-face {
+    font-family: "extrabold";
+    src: url("../fonts/Paperlogy-8ExtraBold.ttf");
+}
+@font-face {
+    font-family: "black";
+    src: url("../fonts/Paperlogy-9Black.ttf");
+}
+
+/* ----------- */
+
+@media screen and (max-width: 425px){
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------------- */
+body {
+    width: 100%;
+    min-height: 100%;
+}
+.container {
+    height: 100vh;
+}
+.top .blackbox {
+    width: 100%;
+    background-color: black;
+    height: 8rem;
+    text-align: center;
+    line-height: 12rem;
+}
+.top .blackbox h1 {
+    color: #fff;
+    font-family: "akira";
+    font-size: 2.5rem;
+}
+.middle .bg {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.middle .button {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.middle .button a{
+    width: 50%;
+}
+.middle .button a button {
+    width: 100%;
+    height: 8rem;
+    font-family: "akira";
+    border-radius: 0%;
+    border: 1px solid #000;
+    font-size: 1.8rem;
+    background-color: #fff;
+    color: #00FE00;
+    -webkit-text-stroke: 1px #000;
+}
+.bottom .blackbox {
+    width: 100%;
+    background-color: black;
+    height: 4rem;
+    text-align: center;
+    line-height: 4rem;
+}
+.bottom .blackbox h1 {
+    color: #fff;
+    font-family: "akira";
+    font-size: 2.5rem;
+}
+}

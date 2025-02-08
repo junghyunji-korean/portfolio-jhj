@@ -1,0 +1,143 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: "akira";
+  src: url("../fonts/Akira\ Expanded\ Demo.otf");
+}
+@font-face {
+  font-family: "thin";
+  src: url("../fonts/Paperlogy-1Thin.ttf");
+}
+@font-face {
+  font-family: "extralight";
+  src: url("../fonts/Paperlogy-2ExtraLight.ttf");
+}
+@font-face {
+  font-family: "light";
+  src: url("../fonts/Paperlogy-3Light.ttf");
+}
+@font-face {
+  font-family: "regular";
+  src: url("../fonts/Paperlogy-4Regular.ttf");
+}
+@font-face {
+  font-family: "medium";
+  src: url("../fonts/Paperlogy-5Medium.ttf");
+}
+@font-face {
+  font-family: "semibold";
+  src: url("../fonts/Paperlogy-6SemiBold.ttf");
+}
+@font-face {
+  font-family: "bold";
+  src: url("../fonts/Paperlogy-7Bold.ttf");
+}
+@font-face {
+  font-family: "extrabold";
+  src: url("../fonts/Paperlogy-8ExtraBold.ttf");
+}
+@font-face {
+  font-family: "black";
+  src: url("../fonts/Paperlogy-9Black.ttf");
+}
+
+/* ----------- */
+
+@media screen and (max-width: 425px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* ---------------- */
+
+  body {
+    width: 100%;
+    min-height: 100%;
+  }
+  .container {
+    height: 100vh;
+  }
+  .top {
+    width: 100%;
+    height: 60%;
+    position: relative;
+  }
+  .top .profile {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("../images/profile.gif") no-repeat center/cover;
+  }
+  .top .txt {
+    position: absolute;
+    left: 8%;
+    bottom: 7%;
+  }
+  .top .txt .t-top {
+    padding-bottom: 0.8rem;
+  }
+  .top .txt .t-top span {
+    color: #fff;
+    font-family: "medium";
+    -webkit-text-stroke: 0.8px black;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+    padding-right: 5px;
+  }
+  .top .txt .t-top span:nth-child(1) {
+    font-family: "bold";
+    font-size: 1.8rem;
+  }
+  .top .txt .t-bottom p {
+    color: #fff;
+    font-family: "medium";
+    -webkit-text-stroke: 0.5px black;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+  }
+  .top .txt .t-bottom p strong {
+    color: #fff;
+    font-family: "bold";
+    -webkit-text-stroke: 0.5px black;
+  }
+  .bottom .edu {
+    margin-top: 7%;
+    margin-left: 8%;
+  }
+  .bottom .edu h1 {
+    font-family: "akira";
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+  }
+  .bottom .edu .text1 {
+    display: flex;
+    padding-bottom: 10px;
+  }
+  .bottom .edu .text1 img {
+    padding-right: 20px;
+  }
+  .bottom .edu .text1 .hwrap h4 {
+    font-family: "bold";
+    font-size: 1.1rem;
+  }
+  .bottom .edu .text1 .hwrap h5 {
+    font-family: "light";
+    font-size: 0.8rem;
+  }
+  .bottom .skill {
+    margin-top: 5%;
+    margin-left: 8%;
+  }
+  .bottom .skill h1 {
+    font-family: "akira";
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+  }
+  .bottom .skill .icons {
+  }
+  .bottom .skill .icons img {
+    width: 93%;
+  }
+}

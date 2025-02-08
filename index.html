@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>정현지 포트폴리오</title>
+    <!-- 검색엔진 -->
+    <meta name="robots" content="All" />
+    <meta name="Yeti" content="index, follow" />
+    <meta name="Yeti" content="All" />
+    <meta name="googlebot" content="All" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="daumoa" content="All" />
+    <meta name="daumoa" content="index, follow" />
+    <meta name="title" content="웹디자이너 - 정현지 포트폴리오" />
+    <meta
+      name="description"
+      content="웹디자이너 정현지입니다. 포트폴리오 방문을 환영"
+    />
+    <meta name="keywords" content="웹디자이너, 웹퍼블리셔, 대구 디자이너" />
+    <meta name="author" content="정현지" />
+    <meta name="content-language" content="kr" />
+    <!-- 오픈그래프 -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="portfolio" />
+    <meta property="og:title" content="정현지 포트폴리오" />
+    <meta
+      property="og:description"
+      content="웹디자이너 정현지의 포트폴리오 입니다."
+    />
+    <meta property="og:image" content="images/ddgg.png" />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="300" />
+
+    <link rel="stylesheet" href="css/portfolio.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul id="menu">
+          <li><a href="index.html">MAIN</a></li>
+          <li><a href="coding.html">CODING</a></li>
+          <li><a href="design.html">DESIGN</a></li>
+          <!-- <li><a href="mobile.html">RESPON</a></li> -->
+        </ul>
+      </nav>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const menuItems = document.querySelectorAll("#menu li a");
+
+          // 🔹 1️⃣ 현재 페이지의 URL 가져오기
+          let currentPage = window.location.href; // 전체 URL 가져오기
+
+          // 🔹 2️⃣ 저장된 데이터 가져오기
+          const savedPage = localStorage.getItem("activeMenu");
+
+          // 🔹 3️⃣ 모든 메뉴에서 active 클래스 제거
+          menuItems.forEach((link) =>
+            link.parentElement.classList.remove("active")
+          );
+
+          // 🔹 4️⃣ 저장된 페이지와 현재 페이지가 일치하면 active 적용
+          if (savedPage) {
+            menuItems.forEach((link) => {
+              if (link.href === savedPage) {
+                link.parentElement.classList.add("active");
+              }
+            });
+          } else {
+            // 초기 로드 시 현재 페이지의 링크와 같은 메뉴 활성화
+            menuItems.forEach((link) => {
+              if (link.href === currentPage) {
+                link.parentElement.classList.add("active");
+                localStorage.setItem("activeMenu", link.href); // 첫 로드시 저장
+              }
+            });
+          }
+
+          // 🔹 5️⃣ 클릭한 메뉴를 localStorage에 저장
+          menuItems.forEach((link) => {
+            link.addEventListener("click", function () {
+              localStorage.setItem("activeMenu", this.href);
+            });
+          });
+        });
+      </script>
+    </header>
+
+    <main>
+      <div class="mainpage">
+        <div class="toggle-box">
+          <button id="changeImageBtn"></button>
+        </div>
+
+        <script>
+          const btn = document.querySelector("#changeImageBtn");
+
+          btn.addEventListener("click", function () {
+            const justImage = document.querySelector("main .just .justimage");
+            document.body.classList.toggle("dark");
+            btn.classList.toggle("on");
+            justImage.classList.toggle("on");
+          });
+        </script>
+
+        <div class="active">
+          <p>JUNGHYUNJI</p>
+          <p>PORTFOLIO</p>
+        </div>
+        <div class="green-line">
+          <div class="slide-track">
+            <div class="slider-item">
+              안녕하세요 빠른 적응력으로 변화하는 세상에서 최적의 디자인
+              솔루션을 내는 정현지 입니다
+            </div>
+            <img src="images/Subtract.png" alt="뾰족별" class="slider-item" />
+            <div class="slider-item">
+              안녕하세요 빠른 적응력으로 변화하는 세상에서 최적의 디자인
+              솔루션을 내는 정현지 입니다
+            </div>
+            <img src="images/Subtract.png" alt="뾰족별" class="slider-item" />
+            <div class="slider-item">
+              안녕하세요 빠른 적응력으로 변화하는 세상에서 최적의 디자인
+              솔루션을 내는 정현지 입니다
+            </div>
+            <img src="images/Subtract.png" alt="뾰족별" class="slider-item" />
+          </div>
+        </div>
+        <script src="js/slider.js"></script>
+      </div>
+      <div class="introduce">
+        <div class="wrap">
+          <div class="photo">
+            <img src="images/profile.gif" alt="정현지 프로필" />
+          </div>
+          <div class="info">
+            <h2>MY INFO</h2>
+            <h3>정현지</h3>
+            <p>1996.04.14</p>
+            <p class="bottom">Bukgu. Daegu. Republic of Korea</p>
+            <h2>EDUCATION</h2>
+            <div class="dd">
+              <p>2015~2019</p>
+              <p>계명대학교 철학윤리학과/언론영상학과 복수전공 졸업</p>
+            </div>
+            <div class="dd">
+              <p>2024~2025</p>
+              <p class="bottom">
+                그린컴퓨터디자인학원 UI/UX 반응형웹디자인 과정 수료
+              </p>
+            </div>
+            <h2>LICENSE</h2>
+            <div class="dd">
+              <p>GTQ 포토샵 1급</p>
+              <p>JLPT 일본어 4급</p>
+            </div>
+            <div class="dd">
+              <p>GTQi 일러스트 1급</p>
+              <p class="bottom">운전면허 2종 보통</p>
+            </div>
+            <h2>CONTACT</h2>
+            <div class="dd">
+              <p>Phone</p>
+              <p>+82 010-5630-3231</p>
+            </div>
+            <div class="dd">
+              <p>E-mail</p>
+              <p class="bottom">cooki3433@naver.com</p>
+            </div>
+            <h2>TOOLS</h2>
+            <div class="box">
+              <p>Ps</p>
+              <p>Ai</p>
+              <p>Pr</p>
+              <p>Ae</p>
+              <p>
+                <img src="images/figma-color-icon.png" alt="피그마아이콘" />
+              </p>
+              <p><img src="images/html.png" alt="html-icon" /></p>
+              <p><img src="images/css.png" alt="css-icon" /></p>
+              <p><img src="images/js.png" alt="js-icon" /></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="just" id="just">
+        <div class="justimage"></div>
+      </div>
+    </main>
+    <footer>
+      <div class="contact">
+        <div class="left">
+          <div class="title">
+            <h1>CONTACT</h1>
+          </div>
+          <div class="box">
+            <div class="iconbox">
+              <img src="images/mail.png" alt="mail" />
+            </div>
+            <p id="copyText">cooki3433@naver.com</p>
+          </div>
+          <div class="box">
+            <div class="iconbox">
+              <img src="images/call.png" alt="phone" />
+            </div>
+            <p id="copyTExt">010-5630-3231</p>
+          </div>
+          <div class="box">
+            <div class="iconbox">
+              <img src="images/home.png" alt="home" />
+            </div>
+            <p>Daegu.Republic of Korea</p>
+          </div>
+          <script src="js/copy.js"></script>
+        </div>
+        <div class="right">
+          <div class="resume">
+            <p>이력서 보러가기</p>
+            <strong
+              ><a href="pdf/resume.pdf" target="_blank"> >>Click Me</a></strong
+            >
+          </div>
+          <div class="form-container">
+            <form action="#" method="post">
+              <div class="wrap">
+                <label for="name">NAME</label>
+                <input type="text" id="name" required="required" />
+              </div>
+
+              <div class="wrap">
+                <label for="email">E-MAIL</label>
+                <input type="email" id="email" required="required" />
+              </div>
+
+              <div class="wrap">
+                <label for="message">Message</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  required="required"
+                ></textarea>
+              </div>
+
+              <span></span>
+
+              <button type="submit">SEND</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

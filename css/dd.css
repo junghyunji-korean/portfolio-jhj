@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    min-height: 100vh; /* 화면 전체 높이 */;
+}
+
+/* 왼쪽 세로형 헤더 */
+.vertical-header {
+    width: 250px; /* 헤더의 고정 너비 */
+    background-color: #2c3e50; /* 배경색 */
+    color: white; /* 텍스트 색상 */
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: center;
+    padding: 20px;
+}
+
+.vertical-header h1 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.vertical-header nav {
+    width: 100%;
+}
+
+.vertical-header nav ul {
+    list-style: none;
+}
+
+.vertical-header nav ul li {
+    margin: 10px 0;
+}
+
+.vertical-header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.vertical-header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* 오른쪽 콘텐츠 */
+.content {
+    flex: 1; /* 나머지 공간을 차지 */
+    padding: 20px;
+    background-color: #ecf0f1; /* 콘텐츠 배경색 */
+    overflow-y: auto; /* 세로 스크롤 */
+}
+
+.content h2 {
+    margin-bottom: 20px;
+}
+
+.content p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .vertical-header {
+        width: 100%;
+        height: 60px; /* 세로형 헤더를 가로로 변경 */
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px;
+    }
+
+    .content {
+        margin-top: 60px; /* 헤더 아래에 콘텐츠 배치 */
+    }
+}
+.card {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.card.coding {
+    background-color: #9c27b0;
+}
+
+.card.design {
+    background-color: #e91e63;
+}
+
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    text-align: left;
+    font-size: 48px;
+    font-weight: bold;
+    color: #000;
+    width: 150px;
+    padding-left: 10px;
+}
+
+.footer span {
+    color: #333;
+}

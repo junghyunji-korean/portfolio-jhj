@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design</title>
+    <link rel="stylesheet" href="css/design.css"/>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="shortcut icon" href="favicon.ico">
+    <script src="js/design.js" defer></script>
+    <!-- aos css cdn -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- aos js cdn -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body>
+    <body>
+        <header>
+            <nav>
+                <ul id="menu">
+                <li><a href="index.html">MAIN</a></li>
+                <li><a href="coding.html">CODING</a></li>
+                <li><a href="design.html">DESIGN</a></li>
+                </ul>
+            </nav>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const menuItems = document.querySelectorAll("#menu li a");
+        
+                    // 🔹 1️⃣ 현재 페이지의 URL 가져오기
+                    let currentPage = window.location.href; // 전체 URL 가져오기
+        
+                    // 🔹 2️⃣ 저장된 데이터 가져오기
+                    const savedPage = localStorage.getItem("activeMenu");
+        
+                    // 🔹 3️⃣ 모든 메뉴에서 active 클래스 제거
+                    menuItems.forEach(link => link.parentElement.classList.remove("active"));
+        
+                    // 🔹 4️⃣ 저장된 페이지와 현재 페이지가 일치하면 active 적용
+                    if (savedPage) {
+                        menuItems.forEach(link => {
+                            if (link.href === savedPage) {
+                                link.parentElement.classList.add("active");
+                            }
+                        });
+                    } else {
+                        // 초기 로드 시 현재 페이지의 링크와 같은 메뉴 활성화
+                        menuItems.forEach(link => {
+                            if (link.href === currentPage) {
+                                link.parentElement.classList.add("active");
+                                localStorage.setItem("activeMenu", link.href); // 첫 로드시 저장
+                            }
+                        });
+                    }
+        
+                    // 🔹 5️⃣ 클릭한 메뉴를 localStorage에 저장
+                    menuItems.forEach(link => {
+                        link.addEventListener("click", function () {
+                            localStorage.setItem("activeMenu", this.href);
+                        });
+                    });
+                });
+            </script>
+
+        </header>
+            <main>
+            <div class="page1">
+                <div class="toggle-box">
+                <button id="changeImageBtn"></button>
+                </div>
+        
+                <script>
+                    const btn = document.querySelector('#changeImageBtn')
+                    
+                    btn.addEventListener('click',function(){
+                    const justImage = document.querySelector('footer .wrap .footerlogo .image');
+                    document.body.classList.toggle('dark')
+                    btn.classList.toggle('on')
+                    justImage.classList.toggle('on')
+                    })
+                </script>
+        
+                <div class="hj">
+                <img src="images/hjicon.png" alt="정현지미모티콘" />
+                <div class="talk">
+                    <img src="images/designtalk.png" alt="말풍선" />
+                </div>
+                </div>
+            </div>
+            <section class="app">
+                <section class="wrap">
+                <div class="title">
+                    <h1>APP DESIGN</h1>
+                </div>
+                <div class="contents">
+                    <div class="left" data-aos="fade-down" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="images/phone.png" alt="앱디자인 목업" />
+                    </div>
+                    <div class="right" data-aos="fade-down" data-aos-delay="400" data-aos-duration="1000">
+                    <div class="about">
+                        <h2>About Project</h2>
+                        <p>하이디저트는</p>
+                        <p class="blackline">"디저트와 카페를 즐기는 사람들을 위한 어플은 없을까?"</p>
+                        <p>에서 출발한 가상의어플입니다.</p>
+                        <p>맛있는 디저트, 편안한 휴식공간을 제공하는 카페,</p>
+                        <p>특별한 메뉴를 원하는 이들이 쉽게 접근할 수 있도록 디자인 되었습니다.</p>
+                        <p>직관적인 아이콘과 사용자 친화적인 레이아웃으로 어플이 접근성을 높이고,</p>
+                        <p>SNS역할도 가능한 어플로 만들어 사용자가 정보 뿐만 아니라</p>
+                        <p>어플 내 오래머물며 흥미를 가질 수 있게끔 설게하였습니다.</p>
+                        <p>어플에서 사용되는 아이콘은 일러스트 프로그램으로 모두 직접 만들었습니다.</p>
+                    </div>
+                    <div class="use">
+                        <h3>Use Tools</h3>
+                        <div class="blackbox">
+                        <span>Ai</span>
+                        <span>Ps</span>
+                        <span><img src="images/figma-icon.png" alt="피그마아이콘"></span>
+                    </div>
+                </div>
+                    <div class="more">
+                        <h3>More View(icon click plz)</h3>
+                        <div class="blackbox">
+                        <a href="https://www.figma.com/proto/8oYWVV45jhJqUaMWT5xKfM/%ED%95%98%EC%9D%B4%EB%94%94%EC%A0%80%ED%8A%B8?node-id=0-30&starting-point-node-id=0%3A30" target="_blank">
+                            <img src="images/figma-icon.png" alt="피그마아이콘">
+                        </a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h3>Project Period</h3>
+                        <p>2024.11.18~2024.11.25(팀 프로젝트)</p>
+                    </div>
+                    </div>
+                </div>
+                </section>
+            </section>
+            <section class="site">
+                <section class="wrap">
+                    <div class="title">
+                        <h1>SITE REDESIGN</h1>
+                    </div>
+                    <div class="contents">
+                        <div class="left" data-aos="fade-down" data-aos-delay="300" data-aos-duration="1000">
+                        <img src="images/book-mockup.png" alt="리디자인 목업"/>
+                        </div>
+                        <div class="right" data-aos="fade-down" data-aos-delay="400" data-aos-duration="1000">
+                        <div class="about">
+                            <h2>About Project</h2>
+                            <p>좋은책 어린이 사이트를 리디자인 한 작업물입니다.</p>
+                            <p>기존의 사이트는 정적이고 다소 디자인적으로 부족하다고 느껴 리디자인했습니다.</p>
+                            <p>사이트에 자주 방문하는 학부모와 어린이들에게 호감을 줄 수 있게끔 작업했습니다.</p>
+                            <p>기존 사이트에서 자주 사용되는 연두색 계열을 그대로 가지고 오면서</p>
+                            <p>포근한 느낌이 들도록 색상배치와 아이콘, 레이아웃을 짰습니다.</p>
+                            <p>기존 사이트에서 부족한 요소들이 있는것 같아 추가했습니다. (검색창, 슬라이드)</p>
+                            <p>사용자가 자주 찾거나 꼭 필요로 하는 정보들을 첫 페이지에 담아</p>
+                            <p>사용자 친화적인 UI/UX 로 디자인 한 작업물 입니다.</p>
+                            <p class="blackline">기업의 이미지를 사용자에게 좀 더 온유하고 친숙하게 보이게 하게끔 작업했습니다.</p>
+                        </div>
+                        <div class="use">
+                            <h3>Use Tools</h3>
+                            <div class="blackbox">
+                            <span>Ai</span>
+                            <span><img src="images/figma-icon.png" alt="피그마아이콘"></span>
+                            </div>
+                        </div>
+                        <div class="sitedesign">
+                            <h3>Site Design Comparison(icon click plz)</h3>
+                            <div class="blackbox">
+                            <a href="https://children.sinsago.co.kr/main/main.aspx" target="_blank">original site</a>
+                            <a href="https://www.figma.com/proto/2mALrVwK44qEHZolBgKJcd/1%EC%B0%A8-%EC%9B%B9%EB%A6%AC%EB%94%94%EC%9E%90%EC%9D%B8_%EC%A0%95%ED%98%84%EC%A7%80?node-id=1-2" target="_blank">redesign site</a>
+                            </div>
+                        </div>
+                        <div class="project">
+                            <h3>Project Team</h3>
+                            <p>개인 프로젝트</p>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+            </section>
+            <section class="site">
+                <section class="wrap">
+                    <div class="title">
+                        <h1>SITE REDESIGN</h1>
+                    </div>
+                    <div class="contents">
+                        <div class="left" data-aos="fade-down" data-aos-delay="300" data-aos-duration="1000">
+                        <img src="images/q.png" alt="리디자인 목업"/>
+                        </div>
+                        <div class="right" data-aos="fade-down" data-aos-delay="400" data-aos-duration="1000">
+                        <div class="about">
+                            <h2>About Project</h2>
+                            <p>안경 및 선글라스 브랜드 나인어코드 쇼핑몰 사이트입니다.</p>
+                            <p>기존의 사이트는 나인어코드의 감성을 담았지만 소비자가 쇼핑하기에 다소 어려운</p>
+                            <p>레이아웃으로 제작되어있어 쇼핑하기에 적합한 사이트로 제작해봤습니다.</p>
+                            <p>한눈에 보이는 정리된 헤더와 브랜드가 가장 제공하고 싶어하는 내용을 배너로 제작하고</p>
+                            <p>원 사이트가 가지고 있는 깔끔하고 정돈된 느낌을 살려</p>
+                            <p>브랜드의 감성을 해치지 않으면서 소비자가 제품을 구매하기 쉽도록 제작되었습니다.</p>
+                            <p>또한 브랜드가 진행하는 여러 프로젝트도 메인페이지 안에 들어가있어,</p>
+                            <p>소비하고자 하는 제품안내 뿐만 아니라 브랜드의 가치도 알수 있게끔 하여</p>
+                            <p class="blackline">보다 사용자 중심적인 사이트로 만들었습니다.</p>
+                        </div>
+                        <div class="use">
+                            <h3>Use Tools</h3>
+                            <div class="blackbox">
+                            <span>Ps</span>
+                            <span>Ai</span>
+                            <span><img src="images/figma-icon.png" alt="피그마아이콘"></span>
+                            </div>
+                        </div>
+                        <div class="sitedesign">
+                            <h3>Site Design Comparison(icon click plz)</h3>
+                            <div class="blackbox">
+                            <a href="https://www.9accord.com/?n_media=27758&n_query=%EB%82%98%EC%9D%B8%EC%96%B4%EC%BD%94%EB%93%9C&n_rank=1&n_ad_group=grp-a001-01-000000025708975&n_ad=nad-a001-01-000000294843070&n_keyword_id=nkw-a001-01-000004322408326&n_keyword=%EB%82%98%EC%9D%B8%EC%96%B4%EC%BD%94%EB%93%9C&n_campaign_type=1&n_ad_group_type=1&n_match=1&NaPm=ct%3Dm6qchj3k%7Cci%3D0Ae0002QVo5BbSgIruYt%7Ctr%3Dsa%7Chk%3D487042d4fe873ad15ae3ddaf66449c079607befb%7Cnacn%3Dh993BggDiksfB" target="_blank">original site</a>
+                            <a href="https://cookie3433.cafe24.com/" target="_blank">redesign site</a>
+                            </div>
+                        </div>
+                        <div class="project">
+                            <h3>Project Team</h3>
+                            <p>개인 프로젝트</p>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+            </section>
+            <section class="cardbanner">
+                <div class="wrap">
+                <div class="title">
+                    <h1>CARD BANNER</h1>
+                </div>
+                <div class="slider-container">
+                    <div class="slider" id="slider">
+                    <div class="slide" id="holika">
+                        <img src="images/holika.jpg" alt="Slide 1">
+                        <div class="slide-title">홀리카 홀리카 핑크에디션 SNS 배너</div>
+                        <div class="slide-desc">Holika Holika Pink Adition SNS Banner</div>
+                    </div>
+                    <div class="slide" id="eats">
+                        <img src="images/eats.gif" alt="Slide 2">
+                        <div class="slide-title">NGT 잇츠버닝 영양제 홍보 SNS 배너</div>
+                        <div class="slide-desc">NGT Eat's burning CLA SNS Banner</div>
+                    </div>
+                    <div class="slide" id="yogurt">
+                        <img src="images/yogurt.jpg" alt="Slide 3">
+                        <div class="slide-title">요거트월드 저당 아이스크림 SNS 배너</div>
+                        <div class="slide-desc">Yogurtworld Lowsugar Promotion Banner</div>
+                    </div>
+                    <div class="slide" id="Busan1">
+                        <img src="images/busan1.jpg" alt="Slide 4">
+                        <div class="slide-title">부산 국제 락페스티벌 SNS 배너</div>
+                        <div class="slide-desc">Busan Rock Festival SNS Banner</div>
+                    </div>
+                    <div class="slide" id="Busan2">
+                        <img src="images/busan2.jpg" alt="Slide 5">
+                        <div class="slide-title">부산 국제 락페스티벌 SNS 배너</div>
+                        <div class="slide-desc">Busan Rock Festival SNS Banner</div>
+                    </div>
+                    </div>
+                    <div class="slider-controls">
+                    <button class="control" id="prev">‹</button>
+                    <button class="control" id="next">›</button>
+                    </div>
+                </div>
+                <div class="dunkin">
+                    <div class="box1" id="Dunkin1">
+                    <img src="images/dunkin1.jpg" alt="dunkin1">
+                    <div class="box-title">던킨도너츠 프로모션 세일 SNS 배너 정방형</div>
+                    <div class="box-desc">Dunkin' Promotion Sale SNS Banner</div>
+                    </div>
+                    <div class="box2" id="Dunkin2">
+                    <img src="images/dunkin2.jpg" alt="dunkin2">
+                    <div class="box-title">던킨도너츠 프로모션 세일 SNS 배너 가로형</div>
+                    <div class="box-desc">Dunkin' Promotion Sale SNS Banner</div>
+                    </div>
+                </div>
+                </div>
+
+                <script>
+                const slider = document.getElementById('slider');
+                const prevButton = document.getElementById('prev');
+                const nextButton = document.getElementById('next');
+        
+                let currentIndex = 0;
+        
+                function updateSlider() {
+                    slider.style.transform = `translateX(-${currentIndex * (300 + 20)}px)`; // 300px + 20px margin
+                }
+        
+                nextButton.addEventListener('click', () => {
+                    if (currentIndex < slider.children.length - 1) {
+                        currentIndex++;
+                        updateSlider();
+                    }
+                });
+        
+                prevButton.addEventListener('click', () => {
+                    if (currentIndex > 0) {
+                        currentIndex--;
+                        updateSlider();
+                    }
+                });
+                </script>
+            </section>
+            <section class="shoppage">
+                <div class="title">
+                <h1>SHOP PAGE DESIGN</h1>
+                </div>
+                <div class="wrap">
+                <div class="box1">
+                    <a href="https://www.figma.com/proto/FfokoyupZm2DMgWzG8DUy2/%EB%82%98%EC%9D%B8%EC%96%B4%EC%BD%94%EB%93%9C-%EC%83%81%EC%84%B8%ED%8E%98%EC%9D%B4%EC%A7%80?node-id=1-6" target="_blank">
+                    <div class="image"></div>
+                    <div class="title">나인어코드 제품 상세페이지</div>
+                    <div class="decs">Nineaccord store shopping page</div>
+                    </a>
+                </div>
+                <div class="box2">
+                    <a href="https://www.figma.com/proto/bOMRcNBgF4uJqn18nAPLlO/%EB%A0%8C%EC%A6%88%ED%83%80%EC%9A%B4-%EC%83%81%EC%84%B8%ED%8E%98%EC%9D%B4%EC%A7%80?node-id=1-2" target="_blank">
+                    <div class="image"></div>
+                    <div class="title">렌즈타운 247BB 상품 상세페이지</div>
+                    <div class="decs">Lenstown 247BB shopping page</div>
+                    </a>
+                </div>
+                <div class="box3">
+                    <a href="https://www.figma.com/proto/EEyfMB2q83mDk1PK6tLeNN/%EC%B9%98%EC%9D%B4%EC%B9%B4%EC%99%80-%ED%8C%9D%EC%97%85%EC%8A%A4%ED%86%A0%EC%96%B4?node-id=1-7" target="_blank">
+                    <div class="image"></div>
+                    <div class="title">치이카와 팝업스토어 안내 상세페이지</div>
+                    <div class="decs">Character Popupstore page</div>
+                    </a>
+                </div>
+                <div class="box4">
+                    <a href="https://www.figma.com/proto/qhmJTMcPT4yiGUm5VH9l1v/Untitled?node-id=1-9&t=QKOKbWcDnFa34R7J-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" target="_blank">
+                    <div class="image"></div>
+                    <div class="title">너로다 찹쌀떡 스토어 상세페이지</div>
+                    <div class="decs">Rice cake Store shopping page</div>
+                    </a>
+                </div>
+                </div>
+            </section>
+            <section class="logodesign">
+                <div class="wrap">
+                <div class="title">
+                    <h1>LOGO DESIGN</h1>
+                </div>
+                <div class="logo">
+                    <div class="box">
+                    <a href="pdf/melonbread.pdf" target="_blank"><img src="images/melon.png" alt="melonbread"></a>
+                    </div>
+                    <div class="box">
+                    <a href="pdf/marathon.pdf" target="_blank"><img src="images/marathon-girl.JPG" alt="marathon"></a>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+            </main>
+            <footer>
+                <div class="wrap">
+                    <div class="contact">
+                    <div class="title">
+                        <h1>CONTACT</h1>
+                    </div>
+                    <div class="write">
+                        <p>cooki3433@naver.com</p>
+                        <p>+82 010-5630-3231</p>
+                    </div>
+                    </div>
+                    <div class="aboutme">
+                    <div class="title">
+                        <h1>ABOUT ME</h1>
+                    </div>
+                    <div class="write">
+                        <p>정현지&nbsp;ISTJ&nbsp;1996.04.14</p>
+                        <p><a href="pdf/resume.pdf" target="_blank">이력서 보러가기</a></p>
+                    </div>
+                    </div>
+                    <div class="footerlogo">
+                    <a href="#">
+                        <div class="image"></div>
+                    </a>
+                    </div>
+                </div>
+            </footer>
+        </body>
+        <script>
+            AOS.init();
+        </script>
+</body>
+
+
+</html>

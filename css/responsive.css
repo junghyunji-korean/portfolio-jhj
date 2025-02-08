@@ -1,0 +1,111 @@
+/* ------------- 반응형 스타일 (최대 너비 320px) ------------- */
+@media screen and (max-width: 320px) {
+    header {
+        width: 320px;
+        height: 3rem;
+    }
+    header nav {
+        margin: 0 2rem;
+    }
+    header nav ul {
+        display: flex;
+        justify-content: space;
+        padding-top: 0.7rem;
+    }
+    header nav ul li {
+        margin-left: 1rem;
+    }
+    header nav ul li a {
+        font-size: 1rem;
+    }
+
+    main .mainpage .toggle-box button {
+        width: 80px;
+        height: 40px;
+        top: 7%;
+        right: 9%;
+    }
+    
+
+    .introduce .wrap {
+        flex-direction: column;
+        margin: 1rem;
+        text-align: center;
+    }
+    .introduce .wrap .photo {
+        border-right: none;
+        border-bottom: 2px solid #000;
+    }
+    .introduce .wrap .photo img {
+        width: 100%;
+    }
+    .introduce .wrap .info {
+        margin: 1rem 0;
+    }
+    .introduce .wrap .info h2 {
+        font-size: 2rem;
+    }
+    .introduce .wrap .info h3 {
+        font-size: 1.5rem;
+    }
+    .introduce .wrap .info p {
+        font-size: 1rem;
+    }
+    .introduce .wrap .info .box {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .introduce .wrap .info .box p {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+        line-height: 58px;
+        margin: 5px;
+    }
+
+    footer .contact {
+        flex-direction: column;
+        margin: 0 2rem;
+    }
+    footer .contact .left .title h1 {
+        font-size: 4rem;
+    }
+    footer .contact .left .box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    footer .contact .left .box p {
+        font-size: 1.5rem;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .iconbox {
+        width: 4rem;
+        height: 4rem;
+    }
+    .iconbox img {
+        width: 3rem;
+    }
+
+    .right {
+        width: 100%;
+        margin-top: 5rem;
+    }
+    .right .resume {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .right .form-container form {
+        width: 100%;
+    }
+    .right .form-container form input,
+    .right .form-container form textarea {
+        width: 100%;
+    }
+    .right .form-container form button {
+        width: 200px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+}

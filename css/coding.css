@@ -1,0 +1,431 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: "akira";
+  src: url("../fonts/Akira\ Expanded\ Demo.otf");
+}
+@font-face {
+  font-family: "thin";
+  src: url("../fonts/Paperlogy-1Thin.ttf");
+}
+@font-face {
+  font-family: "extralight";
+  src: url("../fonts/Paperlogy-2ExtraLight.ttf");
+}
+@font-face {
+  font-family: "light";
+  src: url("../fonts/Paperlogy-3Light.ttf");
+}
+@font-face {
+  font-family: "regular";
+  src: url("../fonts/Paperlogy-4Regular.ttf");
+}
+@font-face {
+  font-family: "medium";
+  src: url("../fonts/Paperlogy-5Medium.ttf");
+}
+@font-face {
+  font-family: "semibold";
+  src: url("../fonts/Paperlogy-6SemiBold.ttf");
+}
+@font-face {
+  font-family: "bold";
+  src: url("../fonts/Paperlogy-7Bold.ttf");
+}
+@font-face {
+  font-family: "extrabold";
+  src: url("../fonts/Paperlogy-8ExtraBold.ttf");
+}
+@font-face {
+  font-family: "black";
+  src: url("../fonts/Paperlogy-9Black.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+/* 스크롤바 바꾸기 */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #00FE00;
+}
+::-webkit-scrollbar-track {
+  background-color: #000;
+}
+/* darkmode */
+.dark {
+  background-color: #000;
+  color: #fff;
+}
+.dark footer {
+  border-top: 1px solid #fff;
+}
+.dark footer .wrap .aboutme .write p a {
+  color: #fff;
+}
+.dark .coding .clone .left .button button {
+  background-color: #000;
+  border: 1px solid #fff;
+}
+.dark .coding .clone .left .button button a {
+  color: #fff;
+}
+.dark .coding .clone .left .button button:hover {
+  background-color: #fff;
+}
+.dark .coding .clone .left .button button:hover a {
+  color: #000;
+}
+.dark .coding .marathon .right .button button {
+  background-color: #000;
+  border: 1px solid #fff;
+}
+.dark .coding .marathon .right .button button a {
+  color: #fff;
+}
+.dark .coding .marathon .right .button button:hover {
+  background-color: #fff;
+}
+.dark .coding .marathon .right .button button:hover a {
+  color: #000;
+}
+.dark .coding .pizza .left .button button {
+  background-color: #000;
+  border: 1px solid #fff;
+}
+.dark .coding .pizza .left .button button a {
+  color: #fff;
+}
+.dark .coding .pizza .left .button button:hover {
+  background-color: #fff;
+}
+.dark .coding .pizza .left .button button:hover a {
+  color: #000;
+}
+/* ------------ */
+/* ----header------ */
+header {
+  width: 100%;
+  height: 4rem;
+  background-color: #000;
+  position: fixed;
+  z-index: 100;
+}
+header nav {
+  margin: 0 5rem;
+}
+header nav ul {
+  display: flex;
+  justify-content: end;
+  padding-top: 1rem;
+}
+header nav ul li {
+  margin-left: 3rem;
+}
+header nav ul li a {
+  color: #fff;
+  font-family: "akira";
+  font-size: 2rem;
+}
+header nav ul li a:hover {
+  color: #00FE00;
+}
+.active a {
+  color: #00fe00;
+}
+/* ---------page1--------- */
+
+.page1 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.page1 .toggle-box button {
+  width: 150px;
+  height: 50px;
+  background: url('../images/darkmode.png')no-repeat center/contain;
+  position: absolute;
+  top: 10%;
+  right: 5rem;
+  border: none;
+  cursor: pointer;
+}
+.page1 .toggle-box button.on {
+  background: url('../images/lightmode.png') no-repeat center/contain;
+}
+
+.page1 .hj {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.page1 .hj .talk {
+  position: absolute;
+  top: -30%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.page1 .hj .talk img {
+  animation: float 2s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+/* ----------코딩--------- */
+.coding {
+  margin: 0 7rem;
+  /* scroll-snap-type: y mandatory;
+  overflow: auto; */
+}
+/* 클론코딩 시민제과 */
+.coding .clone {
+  width: 100%;
+  height: 100vh;
+  /* background-color: rgb(219, 255, 243); */
+  display: flex;
+  justify-content: space-between;
+  /* scroll-snap-align: start; */
+}
+.coding .clone .left {
+  width: 50%;
+  margin-top: 13rem;
+}
+.coding .clone .left h2 {
+  font-family: "akira";
+  font-size: 2.5rem;
+}
+.coding .clone .left h1 {
+  font-family: "akira";
+  font-size: 7.5rem;
+}
+.coding .clone .left p {
+  font-family: "light";
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.coding .clone .left .button {
+  margin-top: 3rem;
+}
+.coding .clone .left .button button {
+  background-color: #fff;
+  border: 1px solid #000;
+  width: 330px;
+  height: 100px;
+  transition: all 0.5s;
+}
+.coding .clone .left .button button:hover {
+  background-color: #000;
+}
+.coding .clone .left .button button:hover a {
+  color: #fff;
+}
+.coding .clone .left .button button:nth-child(1) {
+  margin-right: 1.5rem;
+}
+.coding .clone .left .button button a {
+  color: #000;
+  font-family: "black";
+  font-size: 1.5rem;
+}
+.coding .clone .right {
+  width: 48%;
+  margin-top: 12rem;
+}
+.coding .clone .right img {
+  width: 100%;
+}
+
+/* 리디자인 대구 마라톤 */
+
+.coding .marathon {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  /* scroll-snap-align: start; */
+}
+.coding .marathon .left {
+  width: 48%;
+  margin-top: 12rem;
+}
+.coding .marathon .left img {
+  width: 100%;
+}
+.coding .marathon .right {
+  width: 50%;
+  margin-top: 13rem;
+  text-align: right;
+}
+.coding .marathon .right h2 {
+  font-family: "akira";
+  font-size: 2.5rem;
+}
+.coding .marathon .right h2:nth-child(1) {
+  font-family: "akira";
+  font-size: 1.5rem;
+}
+.coding .marathon .right h1 {
+  font-family: "akira";
+  font-size: 7.5rem;
+}
+.coding .marathon .right p {
+  font-family: "light";
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.coding .marathon .right .button {
+  margin-top: 3rem;
+}
+.coding .marathon .right .button button {
+  background-color: #fff;
+  border: 1px solid #000;
+  width: 330px;
+  height: 100px;
+  transition: all 0.5s;
+}
+.coding .marathon .right .button button:hover {
+  background-color: #000;
+}
+.coding .marathon .right .button button:hover a {
+  color: #fff;
+}
+.coding .marathon .right .button button:nth-child(1) {
+  margin-right: 1.5rem;
+}
+.coding .marathon .right .button button a {
+  color: #000;
+  font-family: "black";
+  font-size: 1.5rem;
+}
+/* 리디자인 피자알볼로 */
+
+.coding .pizza {
+  width: 100%;
+  height: 100vh;
+  /* background-color: rgb(219, 255, 243); */
+  display: flex;
+  justify-content: space-between;
+}
+.coding .pizza .left {
+  width: 50%;
+  margin-top: 13rem;
+}
+.coding .pizza .left h2 {
+  font-family: "akira";
+  font-size: 2.5rem;
+}
+.coding .pizza .left h1 {
+  font-family: "akira";
+  font-size: 7.5rem;
+}
+.coding .pizza .left p {
+  font-family: "light";
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.coding .pizza .left .button {
+  margin-top: 3rem;
+}
+.coding .pizza .left .button button {
+  background-color: #fff;
+  border: 1px solid #000;
+  width: 330px;
+  height: 100px;
+  transition: all 0.5s;
+}
+.coding .pizza .left .button button:hover {
+  background-color: #000;
+}
+.coding .pizza .left .button button:hover a {
+  color: #fff;
+}
+.coding .pizza .left .button button:nth-child(1) {
+  margin-right: 1.5rem;
+}
+.coding .pizza .left .button button a {
+  color: #000;
+  font-family: "black";
+  font-size: 1.5rem;
+}
+.coding .pizza .right {
+  width: 48%;
+  margin-top: 12rem;
+}
+.coding .pizza .right img {
+  width: 100%;
+}
+
+/* -----푸터------- */
+
+footer {
+  margin-top: 5rem;
+  width: 100%;
+  border-top: 1px solid #000;
+}
+footer .wrap {
+  margin: 3rem 7rem;
+  justify-content: space-between;
+  display: flex;
+}
+footer .wrap .contact {
+  width: calc(100% / 3);
+  margin-top: 1rem;
+}
+footer .wrap .aboutme {
+  width: calc(100% / 3);
+  margin-top: 1rem;
+}
+footer .wrap .footerlogo {
+  width: calc(100% / 3);
+}
+footer .wrap .contact .title {
+  margin-bottom: 1rem;
+}
+footer .wrap .contact .title h1 {
+  font-family: "akira";
+  font-size: 2.5rem;
+}
+footer .wrap .contact .write p {
+  font-family: "light";
+  margin-bottom: 1rem;
+}
+footer .wrap .aboutme .title {
+  margin-bottom: 1rem;
+}
+footer .wrap .aboutme .title h1 {
+  font-family: "akira";
+  font-size: 2.5rem;
+}
+footer .wrap .aboutme .write p {
+  font-family: "light";
+  margin-bottom: 1rem;
+}
+footer .wrap .aboutme .write p a {
+  color: #000;
+  font-family: "medium";
+}
+
+footer .wrap .footerlogo .image {
+  background: url('../images/hjlogo-01.png')no-repeat right center/120px;
+  width: 100%;
+  height: 150px;
+}
+footer .wrap .footerlogo .image.on {
+  background: url('../images/hjlogo-white-01.png')no-repeat right center/120px;
+}
