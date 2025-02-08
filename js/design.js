@@ -1,5 +1,5 @@
 document.getElementById("holika").addEventListener("click", function () {
-    const imageUrl = "../images/holika.jpg"; // 여기에 이미지 URL을 넣으세요
+    const imageUrl = "images/holika.jpg"; // 여기에 이미지 URL을 넣으세요
     const popup = window.open("", "_blank", "width=800,height=800");
     popup.document.write(`
         <html>
@@ -13,7 +13,7 @@ document.getElementById("holika").addEventListener("click", function () {
     `);
 });
 document.getElementById("eats").addEventListener("click", function () {
-    const imageUrl = "../images/eats.gif"; // 여기에 이미지 URL을 넣으세요
+    const imageUrl = "images/eats.gif"; // 여기에 이미지 URL을 넣으세요
     const popup = window.open("", "_blank", "width=800,height=800");
     popup.document.write(`
         <html>
@@ -27,7 +27,7 @@ document.getElementById("eats").addEventListener("click", function () {
     `);
 });
 document.getElementById("yogurt").addEventListener("click", function () {
-    const imageUrl = "../images/yogurt.jpg"; // 여기에 이미지 URL을 넣으세요
+    const imageUrl = "images/yogurt.jpg"; // 여기에 이미지 URL을 넣으세요
     const popup = window.open("", "_blank", "width=800,height=800");
     popup.document.write(`
         <html>
@@ -41,7 +41,7 @@ document.getElementById("yogurt").addEventListener("click", function () {
     `);
 });
 document.getElementById("Busan1").addEventListener("click", function () {
-    const imageUrl = "../images/busan1.jpg"; // 여기에 이미지 URL을 넣으세요
+    const imageUrl = "images/busan1.jpg"; // 여기에 이미지 URL을 넣으세요
     const popup = window.open("", "_blank", "width=800,height=800");
     popup.document.write(`
         <html>
@@ -55,7 +55,7 @@ document.getElementById("Busan1").addEventListener("click", function () {
     `);
 });
 document.getElementById("Busan2").addEventListener("click", function () {
-    const imageUrl = "../images/busan2.jpg"; // 여기에 이미지 URL을 넣으세요
+    const imageUrl = "images/busan2.jpg"; // 여기에 이미지 URL을 넣으세요
     const popup = window.open("", "_blank", "width=800,height=800");
     popup.document.write(`
         <html>
@@ -69,7 +69,7 @@ document.getElementById("Busan2").addEventListener("click", function () {
     `);
 });
 document.getElementById("Dunkin1").addEventListener("click", function () {
-    const imageUrl = "../images/dunkin1.jpg"; // 여기에 이미지 URL을 넣으세요
+    const imageUrl = "images/dunkin1.jpg"; // 여기에 이미지 URL을 넣으세요
     const popup = window.open("", "_blank", "width=800,height=800");
     popup.document.write(`
         <html>
@@ -83,7 +83,7 @@ document.getElementById("Dunkin1").addEventListener("click", function () {
     `);
 });
 document.getElementById("Dunkin2").addEventListener("click", function () {
-    const imageUrl = "../images/dunkin2.jpg"; // 여기에 이미지 URL을 넣으세요
+    const imageUrl = "images/dunkin2.jpg"; // 여기에 이미지 URL을 넣으세요
     const popup = window.open("", "_blank", "width=800,height=300");
     popup.document.write(`
         <html>
